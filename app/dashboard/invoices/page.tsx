@@ -8,6 +8,14 @@ import { InvoicesTableSkeleton } from '@/app/ui/skeletons';
 
 import { fetchInvoicesPages } from '@/app/lib/data';
 
+import { Metadata } from 'next';
+ 
+export const metadata: Metadata = {
+  title: {
+    template: '%s | Acme Dashboard',
+    default: 'Invoices',
+  },
+};
  
 export default async function Page(props: {
   searchParams?: Promise<{
